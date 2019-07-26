@@ -1,5 +1,4 @@
 const bodyParser = require("body-parser");
-const cookieParser = require("cookie-parser");
 
 class RequestParserTask {
   constructor () {
@@ -7,8 +6,6 @@ class RequestParserTask {
   }
 
   run (app) {
-    app.use(cookieParser());
-
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
   }
