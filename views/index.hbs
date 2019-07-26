@@ -1,1 +1,11 @@
 <p>Server is <strong>live</strong> on port {{port}}.</p>
+
+{{#if User.displayName}}
+  <p>Welcome {{User.displayName}}!</p>
+{{else}}
+  <p>Hello, guest.
+    <br/>Please authenticate.</p>
+  <form method="POST" action="/login">
+    <button type="submit">Login</button>
+  </form>
+{{/if}}

@@ -7,8 +7,14 @@ class RoutingTask {
 
   run (app) {
     const config = app.get("config");
-    app.get("/", (req, res, next) =>
-      res.render("index", { layout: "layout", title: config.TITLE, port: config.PORT }));
+
+    app.get("/", (req, res, next) => {
+      res.render("index", {
+        port: config.PORT,
+        title: config.TITLE,
+        User: req.user,
+      });
+    });
 
     setupApiRouter();
   }
