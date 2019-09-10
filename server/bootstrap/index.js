@@ -1,3 +1,5 @@
+"use strict";
+
 const AppSettingsTask = require("./tasks/app-settings");
 const AssetsEngineTask = require("./tasks/assets");
 const AuthTask = require("./tasks/auth");

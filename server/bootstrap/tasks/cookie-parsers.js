@@ -1,3 +1,5 @@
+"use strict";
+
 const cookieParser = require("cookie-parser");
 const session = require("cookie-session");
 
@@ -8,7 +10,7 @@ class CookieParserTask {
 
   run (app) {
     const sevenDays = 7 * 24 * 60 * 60 * 1000;
-    const secretKey = "coo-s-" + String(Math.random()).slice(2);
+    const secretKey = "coo-s-hard-to-guess";
 
     app.use(cookieParser(secretKey));
 

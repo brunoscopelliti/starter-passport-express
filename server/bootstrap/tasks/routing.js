@@ -16,7 +16,7 @@ class RoutingTask {
       });
     });
 
-    setupApiRouter();
+    setupApiRouter(app);
   }
 }
 

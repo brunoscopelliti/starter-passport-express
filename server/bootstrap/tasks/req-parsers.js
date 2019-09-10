@@ -1,3 +1,5 @@
+"use strict";
+
 const bodyParser = require("body-parser");
 
 class RequestParserTask {
