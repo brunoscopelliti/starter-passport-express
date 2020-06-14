@@ -38,12 +38,10 @@ class GoolgeOAuthTask {
     const {
       HOST,
       PORT,
-      OAUTH_CONFIG: {
-        GOOGLE_CLIENT_ID,
-        GOOGLE_SECRET_ID,
-        RETURN_URL,
-      },
-    } = app.get("config");
+      GOOGLE_CLIENT_ID,
+      GOOGLE_SECRET_ID,
+      RETURN_URL,
+    } = process.env;
 
     const strategyConfig = {
       clientID: GOOGLE_CLIENT_ID,

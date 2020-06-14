@@ -6,12 +6,15 @@ class RoutingTask {
   }
 
   run (app) {
-    const config = app.get("config");
+    const {
+      PORT,
+      TITLE,
+    } = process.env;
 
     app.get("/", (req, res, next) => {
       res.render("index", {
-        port: config.PORT,
-        title: config.TITLE,
+        port: PORT,
+        title: TITLE,
         User: req.user,
       });
     });
